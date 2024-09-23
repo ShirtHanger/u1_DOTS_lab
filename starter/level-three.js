@@ -13,8 +13,6 @@ const levelWinner = document.querySelector('.level-winner')
 
 const colors = ['silver', 'blue', 'tomato', 'lavender', 'forestgreen', '#111']
 
-const bodyColor = document.body.style.backgroundColor
-
 // const switchColor = (colors) => () => {
 //     randomColor = Math.floor(Math.random() * colors.length);
 //     ball.style.backgroundColor = colors[randomColor]
@@ -40,7 +38,7 @@ for (ball of balls) {
 
 function switchColor(colors) {
     randomColor = Math.floor(Math.random() * colors.length) // Copied this from my Pokemon Album Prework, edited for this
-    bodyColor = colors[randomColor]
+    document.body.style.backgroundColor = colors[randomColor]
     randomColor = Math.floor(Math.random() * colors.length)
     for (ball of balls) {
         ball.style.backgroundColor = colors[randomColor]
